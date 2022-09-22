@@ -68,6 +68,6 @@ button {
         margin: 20px;
     }
     body {
-        height: auto;
+        height: 100%;
     }
 }
