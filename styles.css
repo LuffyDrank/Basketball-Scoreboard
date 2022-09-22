@@ -28,7 +28,7 @@ h1, h2 {
 
 
 .score {
-    font-family: "Cursed Timer ULiL";
+    font-family: 'Cursed Timer ULiL', sans-serif;
     font-size: 6.25rem;
     margin: 20px;
     background-color: black;
