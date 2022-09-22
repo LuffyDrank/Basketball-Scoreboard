@@ -67,4 +67,7 @@ button {
     #scoreboard-div2 {
         margin: 20px;
     }
+    body {
+        height: auto;
+    }
 }
