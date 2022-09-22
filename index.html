@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="http://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+</head>
+<body>
+    <div id="center">
+    <div id="scoreboard">
+        <div id="scoreboard-div2">
+        <div>
+        <h1>HOME</h1>
+        <h2 id="homescore"class="score">0</h2>
+        <button id="1home" onclick="add1home()">+1</button>
+        <button id="2home" onclick="add2home()">+2</button>
+        <button id="3home" onclick="add3home()">+3</button>
+    </div>
+    <div>
+        <h1>GUEST</h1>
+        <h2 id="guestscore" class="score">0</h2>
+        <button id="1guest" onclick="add1guest()">+1</button>
+        <button id="2guest" onclick="add2guest()">+2</button>
+        <button id="3guest" onclick="add3guest()">+3</button>
+    </div>
+    </div>
+    <div id="scoreboard-div1">
+        <button onclick="reset()">Reset all</button>
+    </div>
+</div>
+</body>
+<script src="script.js">
+</script>
+</html>
