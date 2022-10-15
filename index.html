@@ -14,25 +14,31 @@
 </head>
 <body>
     <div id="scoreboard">
-        <div id="scoreboard-div2">
-        <div>
-        <h1>HOME</h1>
-        <h2 id="homescore"class="score">0</h2>
-        <button id="1home" onclick="add1home()">+1</button>
-        <button id="2home" onclick="add2home()">+2</button>
-        <button id="3home" onclick="add3home()">+3</button>
+        <div id="scoreboard-top">
+            <button id="startTimerBtn">Start timer</button>
+            <button id="stopTimerBtn">Stop timer</button>
+            <h2 id="time">Time: </h2>
+        </div>
+        <div id="scoreboard-center">
+            <div id="scoreboard-div2">
+                <h1>HOME</h1>
+                <h2 id="homescore"class="score">0</h2>
+                <button id="1home" onclick="add1home()">+1</button>
+                <button id="2home" onclick="add2home()">+2</button>
+                <button id="3home" onclick="add3home()">+3</button>
+            </div>
+            <div id="scoreboard-div3">
+                <h1>GUEST</h1>
+                <h2 id="guestscore" class="score">0</h2>
+                <button id="1guest" onclick="add1guest()">+1</button>
+                <button id="2guest" onclick="add2guest()">+2</button>
+                <button id="3guest" onclick="add3guest()">+3</button>
+            </div>
+        </div>
+        <div id="scoreboard-bottom">
+            <button onclick="reset()">Reset all</button>
+        </div>
     </div>
-    <div>
-        <h1>GUEST</h1>
-        <h2 id="guestscore" class="score">0</h2>
-        <button id="1guest" onclick="add1guest()">+1</button>
-        <button id="2guest" onclick="add2guest()">+2</button>
-        <button id="3guest" onclick="add3guest()">+3</button>
-    </div>
-    </div>
-    <div id="scoreboard-div1">
-        <button onclick="reset()">Reset all</button>
-</div>
 </body>
 <script src="script.js">
 </script>

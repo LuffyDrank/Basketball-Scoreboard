@@ -1,7 +1,16 @@
+let disableTimer = false;
 let homePoints = 0;
 let guestPoints = 0;
-let home = document.getElementById("homescore");
-let guest = document.getElementById("guestscore");
+let currentTimeSeconds = 0;
+let currentTimeMinutes = 0;
+const home = document.getElementById("homescore");
+const guest = document.getElementById("guestscore");
+const timer = document.getElementById("time");
+const startTimerBtn = document.getElementById("startTimerBtn");
+const stopTimerBtn = document.getElementById("stopTimerBtn");
+
+startTimerBtn.addEventListener("click", startTimer)
+stopTimerBtn.addEventListener("click", stopTimer)
 
 function add1home () {
     homePoints++;
@@ -33,3 +42,29 @@ function reset() {
     guest.textContent = guestPoints;
     home.textContent = homePoints;
 }
+
+timer.innerHTML = `<h2>Time: ${formatTime(currentTimeSeconds, currentTimeMinutes)}</h2>`;
+function Timer() {
+    currentTimeSeconds++;
+    timer.innerHTML = `<h2>Time: ${formatTime(currentTimeSeconds, currentTimeMinutes)}</h2>`;
+    if(currentTimeSeconds >= 60) {
+        currentTimeSeconds = 0;
+        currentTimeMinutes++;
+        timer.innerHTML = `<h2>Time: ${formatTime(currentTimeSeconds, currentTimeMinutes)}</h2>`
+    }
+}
+
+function formatTime(timeSeconds, timeMinutes) {
+    return timeSeconds < 10 ? (`${timeMinutes}:0${timeSeconds}`) : (`${timeMinutes}:${timeSeconds}`)
+}
+
+let intervalId;
+
+function startTimer() {
+        intervalId = setInterval(Timer, 1000);
+}
+function stopTimer() {
+    clearInterval(intervalId);
+    intervalId = null;
+}
+
